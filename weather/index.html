@@ -1,0 +1,235 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body> 
+
+
+
+<!-- 
+   <div class="app-container">
+      <div class="container px-3 py-5 text-center">
+        <input type="text" class="w-100 mx-auto rounded-5 px-4 py-3 bg-main-color mb-5 white-text" placeholder="Find Your Location" id="search">
+        <div class="row g-0">
+          <div class="item col-md-4 bg-sec-color m-0 rounded-4">
+            <div class="d-flex justify-content-between py-2 px-3 text-light bg-main-color rounded-start" id="todayDate">
+              <p id="todayDateDayName" class="my-auto">Sunday</p>
+              <span>
+                <span id="todayDateDayNo" class="my-auto">30</span>
+                <span id="todayDateMonth" class="my-auto">May</span>
+              </span>
+
+            </div>
+            <div class="item-content text-start px-3 py-3 pt-5 text-light" id="today">
+              <p id="todayLocation" class="fs-4">Cairo</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fs-1 fw-bolder">
+                  <span id="todayTemp">20</span>
+                  <span><sup>o</sup>C</span>
+                </span>
+                <img src="imgs/fotos3.png" id="todayConditionImg" alt="">
+              </div>
+              <p id="todayConditinText" class="fs-6 text-light-blue">Sunny</p>
+
+            </div>
+            <div class="item-footer d-flex text-light p-3">
+              <div class="d-flex me-3">
+                <img src="imgs/fotos4.png" class="footer-icons me-2" alt="">
+                <p id="humidity">20</p>
+              </div>
+              <div class="d-flex me-3">
+                <img src="imgs/fotos5.png" class="footer-icons mx-2" alt="">
+                <p id="wind">30 km/h</p>
+              </div>
+              <div class="d-flex me-3">
+                <img src="imgs/fotos6.png" class="footer-icons mx-2" alt="">
+                <p id="windDirection">NNE</p>
+              </div>
+            </div>
+
+
+          </div> -->
+          <!-- Tomorrow Section -->
+            <!-- <div class="item col-md-4 m-0 bg-main-color">
+            <div class="py-2 text-center text-light bg-sec-color" id="tomorrowDate">
+              <p class="nextDayName my-auto">Friday</p>
+            </div>
+            <div class="item-content text-center text-start text-light p-3 pt-5" id="tomorrow">
+              <img src="imgs/fotos3.png" class="nextConditionImg" alt="">
+              <h3>
+                <span class="nextMaxTemp"></span>
+                <span><sup>o</sup>C</span>
+              </h3>
+              <h5 class="text-muted">
+                <span class="nextMinTemp">15</span>
+                <span><sup>o</sup>C</span>
+              </h5>
+              <p class="nextConditionText fs-6 text-light-blue">Partly Cloudy</p>
+
+            </div>
+
+           </div>  -->
+           <!-- after tomorrow -->
+            <!-- <div class="item col-md-4 m-0 bg-sec-color rounded-4">
+            <div class="py-2 text-center text-light bg-sec-color rounded-end" >
+              <p class="my-auto">Friday</p>
+            </div>
+            <div class="item-content text-center text-start text-light p-3 pt-5">
+              <img src="imgs/fotos3.png" class="nextConditionImg" alt="">
+              <h3>
+                <span class="nextMaxTemp"></span>
+                <span><sup>o</sup>C</span>
+              </h3>
+              <h5 class="text-muted">
+                <span class="nextMinTemp">15</span>
+                <span><sup>o</sup>C</span>
+              </h5>
+              <p class="nextConditionText fs-6 text-light-blue">Partly Cloudy</p>
+
+            </div>
+
+           </div>
+
+
+        </div>
+
+      </div>
+    </div>  -->
+
+    <body >
+		
+      <div class="site-content">
+        <div class="site-header">
+          <div class="container">
+            <a class="branding" href="/">
+              <img src="imgs/fotos1.png" alt="" class="logo" width="64" height="38">
+              <div class="logo-type">
+                <h1 class="site-title">Weather</h1>
+                <small class="site-description">tagline goes here</small>
+              </div>
+            </a>
+  
+            <!-- Default snippet for navigation -->
+            <div class="main-navigation">
+              <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+              <ul class="menu">
+                <li class="menu-item current-menu-item"><a href="/">Home</a></li>
+                <li class="menu-item"><a href="#">News</a></li>
+                <li class="menu-item"><a href="#">Live cameras</a></li>
+                <li class="menu-item"><a href="#">Photos</a></li>
+                <li class="menu-item"><a href="/contact">Contact</a></li>
+              </ul> <!-- .menu -->
+            </div> <!-- .main-navigation -->
+  
+            <div class="mobile-navigation"><ul class="menu">
+                <li class="menu-item current-menu-item"><a href="/">Home</a></li>
+                <li class="menu-item"><a href="#">News</a></li>
+                <li class="menu-item"><a href="#">Live cameras</a></li>
+                <li class="menu-item"><a href="#">Photos</a></li>
+                <li class="menu-item"><a href="/contact">Contact</a></li>
+              </ul></div>
+  
+          </div>
+        </div> <!-- .site-header -->
+  
+        <div class="hero" data-bg-image="imgs/fotos2.png" style="background-image: url(imgs/fotos2.png);">
+          <div class="container">
+            <form class="find-location">
+              <input type="text" placeholder="Find your location..." id="search">
+              <input type="button" value="Find" id="submit">
+            </form>
+  
+          </div>
+        </div>
+        <div class="forecast-table">
+          <div class="container">
+            <div class="forecast-container" id="forecast"><div class="today forecast">
+      <div class="forecast-header" id="today">
+      <div class="day">Thursday</div>
+      <div class=" date">11July</div>
+      </div> <!-- .forecast-header -->
+      <div class="forecast-content" id="current">
+      <div class="location">Cairo</div>
+      <div class="degree">
+          <div class="num">38<sup>o</sup>C</div>
+        
+          <div class="forecast-icon">
+              <img src="imgs/fotos3.png" alt="" width="90">
+          </div>	
+      
+      </div>
+      <div class="custom">Partly cloudy</div>
+      <span><img src="imgs/fotos4.png" alt="">20%</span>
+                  <span><img src="imgs/fotos5.png" alt="">18km/h</span>
+                  <span><img src="imgs/fotos5.png" alt="">East</span>
+      </div>
+  </div>	<div class="forecast">
+          <div class="forecast-header">
+              <div class="day">Friday</div>
+          </div> <!-- .forecast-header -->
+          <div class="forecast-content">
+              <div class="forecast-icon">
+                  <img src="imgs/fotos3.png" alt="" width="48">
+              </div>
+              <div class="degree">42.2<sup>o</sup>C</div>
+              <small>29.5<sup>o</sup></small>
+              <div class="custom">Sunny</div>
+          </div>
+          </div>	<div class="forecast">
+          <div class="forecast-header">
+              <div class="day">Saturday</div>
+          </div> <!-- .forecast-header -->
+          <div class="forecast-content">
+              <div class="forecast-icon">
+                  <img src="imgs/fotos3.png" alt="" width="48">
+              </div>
+              <div class="degree">39.9<sup>o</sup>C</div>
+              <small>27.8<sup>o</sup></small>
+              <div class="custom">Sunny</div>
+          </div>
+          </div></div>
+          </div>
+        </div>
+    
+        
+  
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                <form action="#" class="subscribe-form">
+                  <input type="text" placeholder="Enter your email to subscribe...">
+                  <input type="submit" value="Subscribe">
+                </form>
+              </div>
+              <div class="col-md-3 col-md-offset-1">
+                <div class="social-links">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
+                </div>
+              </div>
+            </div>
+  
+            <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+          </div>
+        </footer> <!-- .site-footer -->
+      </div>
+      
+     
+  <div class="css-finder-body-tooltip"></div></body>
+
+
+
+     
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/index.js"></script>
+</body>
+</html>  
